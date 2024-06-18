@@ -3,7 +3,7 @@
 
 ![image](https://github.com/zeycan1/ALIGNEDLAYER-KANIT/assets/108004368/d7da2207-2649-486d-9ba2-a6c98caf86ab)
 
-## Ubuntu 22
+## Ubuntu 22.04
 
 ## Herhangi bir sunucuda çalıştırabilirsiniz. Kanıtımızı alınca işimiz bitecek zaten
 
