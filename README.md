@@ -47,11 +47,10 @@ aligned submit \
 ###  Aşağıdaki gibi bir çıktı almalısınız:
 
 ```bash
-[2024-06-17T22:06:03Z INFO  aligned] Proof submitted to aligned. See the batch in the explorer:
-    https://explorer.alignedlayer.com/batches/0x8ea98526e48f72d4b49ad39902fb320020d3cf02e6506c444300eb3619db4c13
-[2024-06-17T22:06:03Z INFO  aligned] Batch inclusion data written into /Users/maurofab/aligned_verification_data/8ea98526e48f72d4b49ad39902fb320020d3cf02e6506c444300eb3619db4c13_225.json
-[2024-06-17T22:06:03Z INFO  aligned] All messages responded. Closing connection...
-https://explorer.alignedlayer.com/batches/0x8ea98526e48f72d4b49ad39902fb320020d3cf02e6506c444300eb3619db4c13```
+[2024-06-18T15:22:53Z INFO  aligned] Proof submitted to aligned. See the batch in the explorer:
+    https://explorer.alignedlayer.com/batches/0xc9262c4701da0d910d73964bb8b0fced7e9f3601b1e400e294a7a6a7048243f3
+[2024-06-18T15:22:53Z INFO  aligned] Batch inclusion data written into /root/aligned_verification_data/c9262c4701da0d910d73964bb8b0fced7e9f3601b1e400e294a7a6a7048243f3_21.json
+[2024-06-18T15:22:53Z INFO  aligned] All messages responded. Closing connection...
 ```
 
 ###  İşleminizin durumunu kontrol etmek için explorer bağlantısını kullanabilirsiniz:
