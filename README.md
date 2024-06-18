@@ -7,6 +7,11 @@
 
 ## Herhangi bir sunucuda çalıştırabilirsiniz. Kanıtımızı alınca işimiz bitecek zaten
 
+##  Önce sunucumuzu güncelleyelim.
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
 
 ###  Aligned'i indirip yükleyelim
 
