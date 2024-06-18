@@ -1,0 +1,98 @@
+# Aligned
+
+> [!CAUTION]
+> To be used in testnet only.
+
+## Table of Contents
+
+- [Aligned](#aligned)
+  - [Table of Contents](#table-of-contents)
+  - [The Project](#the-project)
+  - [Operator Guide](#operator-guide)
+  - [Aligned Infraestructure Guide](#aligned-infraestructure-guide)
+  - [How to use the testnet](#how-to-use-the-testnet)
+  - [FAQ](#faq)
+  - [What is the objective of Aligned?](#what-is-the-objective-of-aligned)
+
+## The Project
+
+Aligned works with EigenLayer to leverage ethereum consensus mechanism for ZK proof verification. Working outside the EVM, this allows for cheap verification of any proving system. This enables the usage of cutting edge algorithms, that may use new techniques to prove even faster. Even more, proving systems that reduce the proving overhead and add verifier overhead, now become economically feasable to verify thanks to Aligned.
+
+## Operator Guide
+
+If you want to run an operator, check our [Operator Guide](./README_OPERATOR.md)
+
+## Aligned Infraestructure Guide
+
+If you are developing in Aligned, or want to run your own devnet, check our [Infraestructure Guide](./README_INFRAESTRUCTURE.md)
+
+## Testnet
+
+### Contract Information
+
+Testnet contract is deployed on Holesky on the address:
+
+ ```0x58F280BeBE9B34c9939C3C39e0890C81f163B623```
+
+###  How to use the testnet
+
+Download and install Aligned to send proofs in the testnet:
+
+```bash
+curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/install_aligned.sh | bash
+```
+
+If you are experiencing issues, upgrade by running the same command.
+
+### Try it!
+
+We are going to download a proof previously generated, send it to Aligned, and retrieve the results from Ethereum Holesky testnet. Aligned is using EigenLayer to do a fast and cheap verification of more than one thousand proofs per second.
+
+Download an example SP1 proof file with it's ELF file using:
+
+```bash
+curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/get_proof_test_files.sh | bash
+```
+
+Send the proof with:
+
+```bash
+rm -rf ~/aligned_verification_data/ &&
+aligned submit \
+--proving_system SP1 \
+--proof ~/.aligned/test_files/sp1_fibonacci.proof \
+--vm_program ~/.aligned/test_files/sp1_fibonacci-elf \
+--aligned_verification_data_path ~/aligned_verification_data \
+--conn wss://batcher.alignedlayer.com
+```
+
+You should get a response like this:
+
+```bash
+[2024-06-17T22:06:03Z INFO  aligned] Proof submitted to aligned. See the batch in the explorer:
+    https://explorer.alignedlayer.com/batches/0x8ea98526e48f72d4b49ad39902fb320020d3cf02e6506c444300eb3619db4c13
+[2024-06-17T22:06:03Z INFO  aligned] Batch inclusion data written into /Users/maurofab/aligned_verification_data/8ea98526e48f72d4b49ad39902fb320020d3cf02e6506c444300eb3619db4c13_225.json
+[2024-06-17T22:06:03Z INFO  aligned] All messages responded. Closing connection...
+https://explorer.alignedlayer.com/batches/0x8ea98526e48f72d4b49ad39902fb320020d3cf02e6506c444300eb3619db4c13```
+```
+
+You can use the link to the explorer to check the status of your transaction. Then after three blocks, you can check if it has been verified with:
+
+```bash
+aligned verify-proof-onchain \
+--aligned-verification-data ~/aligned_verification_data/*.json \
+--rpc https://ethereum-holesky-rpc.publicnode.com \
+--chain holesky
+```
+
+You should get this result:
+
+```bash
+[2024-06-17T21:58:43Z INFO  aligned] Your proof was verified in Aligned and included in the batch!
+```
+
+If the proof wasn't verified you should get this result:
+
+```bash
+[2024-06-17T21:59:09Z INFO  aligned] Your proof was not included in the batch.
+```
