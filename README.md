@@ -73,6 +73,10 @@ Eğer aşağıdaki gibi bir çıktı aldıysanız işleminiz başarısız olmuş
 
 ### Kanıtınızı elde ettikten sonra tweet atıp linkini Aligner discordundaki testnet kanalına atın.
 
+### Formu doldurmayı unutmayın!!!
+
+
+##  https://docs.google.com/forms/d/e/1FAIpQLSdH9sgfTz4v33lAvwj6BvYJGAeIshQia3FXz36PFfF-WQAWEQ/viewform
 
 
 
