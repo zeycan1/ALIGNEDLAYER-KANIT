@@ -46,12 +46,12 @@ aligned submit \
 
 ###  Aşağıdaki gibi bir çıktı almalısınız:
 
-```bash
+
 [2024-06-18T15:22:53Z INFO  aligned] Proof submitted to aligned. See the batch in the explorer:
     https://explorer.alignedlayer.com/batches/0xc9262c4701da0d910d73964bb8b0fced7e9f3601b1e400e294a7a6a7048243f3
 [2024-06-18T15:22:53Z INFO  aligned] Batch inclusion data written into /root/aligned_verification_data/c9262c4701da0d910d73964bb8b0fced7e9f3601b1e400e294a7a6a7048243f3_21.json
 [2024-06-18T15:22:53Z INFO  aligned] All messages responded. Closing connection...
-```
+
 
 ###  İşleminizin durumunu kontrol etmek için explorer bağlantısını kullanabilirsiniz:
 
